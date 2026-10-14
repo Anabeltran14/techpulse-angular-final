@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class NoticiasService {
   // Agregamos el '/' al inicio para asegurar que lo busque en la raíz de la carpeta public
-  private jsonUrl = 'data/noticias.json';
+  private jsonUrl = '/data/noticias.json';
 
   constructor(private http: HttpClient) { }
 

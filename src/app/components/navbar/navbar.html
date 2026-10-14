@@ -1,0 +1,14 @@
+<header class="bg-techCard border-b border-gray-800 sticky top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <!-- Al hacer clic en el logo, te lleva al inicio -->
+        <div routerLink="/" class="flex items-center gap-2 cursor-pointer">
+            <div class="w-8 h-8 bg-techAccent rounded-md flex items-center justify-center font-bold text-white">TP</div>
+            <h1 class="text-xl font-bold text-white">TechPulse</h1>
+        </div>
+        <nav class="hidden md:flex gap-6 text-sm font-medium text-gray-300">
+            <!-- routerLinkActive resalta la pestaña en la que estás actualmente -->
+            <a routerLink="/" routerLinkActive="text-white font-bold" [routerLinkActiveOptions]="{exact: true}" class="hover:text-white transition-colors cursor-pointer">Inicio</a>
+            <a routerLink="/contacto" routerLinkActive="text-white font-bold" class="hover:text-white transition-colors cursor-pointer">Contacto</a>
+        </nav>
+    </div>
+</header>

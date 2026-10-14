@@ -1,0 +1,28 @@
+<main class="container mx-auto px-4 py-12 max-w-4xl">
+    <a routerLink="/" class="text-techAccent hover:text-white text-sm mb-6 inline-block transition cursor-pointer">← Volver al catálogo</a>
+    
+    @if (noticia) {
+        <article class="bg-techCard p-8 rounded-2xl border border-gray-800 shadow-2xl mt-4">
+            <div class="flex justify-between items-start mb-6">
+                <div>
+                    <span class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wide">{{ noticia.categoria }}</span>
+                    <h1 class="text-3xl md:text-4xl font-bold text-white mt-4 mb-2">{{ noticia.titulo }}</h1>
+                </div>
+            </div>
+            
+            <div class="text-sm text-gray-400 mb-8 pb-8 border-b border-gray-800">
+                <span>Fecha: {{ noticia.fecha }}</span>
+            </div>
+
+            <img [src]="noticia.imagen" [alt]="noticia.titulo" class="w-full h-auto max-h-[450px] object-cover rounded-xl mb-8">
+            
+            <div class="text-gray-300 leading-relaxed text-lg">
+                <p>{{ noticia.contenido || noticia.resumen }}</p>
+            </div>
+        </article>
+    } @else {
+        <div class="bg-techCard p-10 rounded-2xl border border-gray-800 flex justify-center mt-10">
+            <p class="text-gray-500 text-lg">Cargando artículo...</p>
+        </div>
+    }
+</main>
